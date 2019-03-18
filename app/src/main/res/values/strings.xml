@@ -15,7 +15,7 @@
     </string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_scrolling">User Feedback</string>
-    <string name="location">"Restroom Location: MNNIT"</string>
+    <string name="location">"Restroom Location: "</string>
     <string name="odour">"Odour Level"</string>
     <string name="clean">"Cleanliness Level"</string>
     <string name="soap">"Soap Availability"</string>

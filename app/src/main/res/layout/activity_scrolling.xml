@@ -58,20 +58,41 @@
            app:cardUseCompatPadding="true">
 
            <LinearLayout
+               android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:layout_width="match_parent"
-               android:orientation="vertical"
                android:layout_marginTop="10dp"
+               android:orientation="vertical"
                android:weightSum="1">
+
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
+                   android:layout_weight="16.70"
                    android:padding="5dp"
-                   android:textSize="15sp"
-                   android:textColor="@color/colorPrimary"
                    android:text="@string/location"
-                   android:layout_weight="16.70" />
-               </LinearLayout>
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="15sp" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:orientation="vertical"
+               android:layout_marginLeft="140dp"
+               android:weightSum="1">
+
+               <TextView
+                   android:id="@+id/textview1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="16.70"
+                   android:padding="5dp"
+                   android:text="LOCATION"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="15sp" />
+           </LinearLayout>
+
            <LinearLayout
                android:layout_height="wrap_content"
                android:layout_width="match_parent"
@@ -186,10 +207,11 @@
                android:orientation="vertical"
                android:layout_marginTop="220dp"
                android:weightSum="1">
+
                <RatingBar
+                   android:id="@+id/ratingBar1"
                    android:layout_width="259dp"
                    android:layout_height="match_parent"
-                   android:id="@+id/ratingBar"
                    android:layout_gravity="center_horizontal"
                    android:layout_marginLeft="40dp"
                    android:indeterminate="false"
@@ -212,15 +234,24 @@
                    android:textColor="@color/colorAccent"
                    android:text="@string/soap"
                    />
-               <RadioButton
+
+               <RadioGroup
+                   android:id="@+id/radiogroup1"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+               <RadioButton
+                   android:id="@+id/radiobutton1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="end"
                    android:padding="5dp"
                    android:text="Yes"
-                   android:textSize="10dp"
                    android:textAlignment="center"
-                   android:layout_gravity="end"/>
+                   android:textSize="10dp" />
+
                <RadioButton
+                   android:id="@+id/radiobutton2"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_gravity="end"
@@ -228,6 +259,7 @@
                    android:text="No"
                    android:textAlignment="center"
                    android:textSize="10dp" />
+               </RadioGroup>
 
            </LinearLayout>
 
@@ -245,15 +277,25 @@
                    android:textColor="@color/colorAccent"
                    android:text="@string/water"
                    />
-               <RadioButton
+
+               <RadioGroup
+                   android:id="@+id/radiogroup2"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+               <RadioButton
+                   android:id="@+id/radiobutton3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="end"
                    android:padding="5dp"
                    android:text="Yes"
-                   android:textSize="10dp"
                    android:textAlignment="center"
-                   android:layout_gravity="end"/>
+                   android:textSize="10dp" />
+
                <RadioButton
+                   android:id="@+id/radiobutton4"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_gravity="end"
@@ -262,6 +304,7 @@
                    android:textAlignment="center"
                    android:textSize="10dp" />
 
+              </RadioGroup>
            </LinearLayout>
 
            <LinearLayout
@@ -314,10 +357,11 @@
                android:orientation="vertical"
                android:layout_marginTop="470dp"
                android:weightSum="1">
+
                <RatingBar
+                   android:id="@+id/ratingBar2"
                    android:layout_width="259dp"
                    android:layout_height="match_parent"
-                   android:id="@+id/ratingBar1"
                    android:layout_gravity="center_horizontal"
                    android:layout_marginLeft="40dp"
                    android:indeterminate="false"
@@ -349,13 +393,45 @@
                android:layout_marginTop="580dp">
 
                <EditText
+                   android:id="@+id/edittext1"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-
                    android:editable="true"
                    android:hint="Feedback here" />
 
-               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_height="wrap_content"
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:layout_marginTop="640dp">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:padding="5dp"
+                   android:textSize="20sp"
+                   android:textColor="@color/colorAccent"
+                   android:text="Email ID"
+                   android:layout_weight="16.70"
+                   />
+           </LinearLayout>
+           <LinearLayout
+               android:layout_height="wrap_content"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:weightSum="1"
+               android:layout_marginTop="680dp">
+
+               <EditText
+                   android:id="@+id/edittext2"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:editable="true"
+                   android:hint="Enter Email ID here" />
+
+           </LinearLayout>
 
            <LinearLayout
                android:layout_height="wrap_content"
@@ -363,20 +439,20 @@
                android:orientation="vertical"
                android:paddingBottom="20dp"
                android:weightSum="1"
-
-               android:layout_marginTop="650dp">
+               android:layout_marginTop="750dp">
 
                <Button
+                   android:id="@+id/button1"
                    android:layout_width="100dp"
                    android:layout_height="wrap_content"
-                   android:textAlignment="center"
-                   android:padding="5dp"
-                   android:clickable="true"
-                   android:text="SUBMIT"
-                   android:textColor="@color/abc_primary_text_disable_only_material_dark"
-                   android:textSize="15dp"
+                   android:layout_gravity="center_horizontal"
                    android:backgroundTint="@color/colorAccent"
-                   android:layout_gravity="center_horizontal" />
+                   android:clickable="true"
+                   android:padding="5dp"
+                   android:text="SUBMIT"
+                   android:textAlignment="center"
+                   android:textColor="@color/abc_primary_text_disable_only_material_dark"
+                   android:textSize="15dp" />
            </LinearLayout>
 
 
